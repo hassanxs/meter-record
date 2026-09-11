@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meter Record • Official User Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #131210;
+      --sidebar-bg: #100f0e;
+      --card: #1B1915;
+      --border: #2A2721;
+      --text: #EFE9E1;
+      --muted: #9A9184;
+      --accent: #C7F24B;
+      --accent-ink: #1A1206;
+      --danger: #DA4B45;
+      --caution: #E8A75A;
+      --safe: #6FAE6F;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+    aside {
+      width: 280px;
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 28px 20px;
+      flex-shrink: 0;
+    }
+    aside .brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    aside nav a {
+      display: block;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin-bottom: 4px;
+      transition: all 0.2s;
+    }
+    aside nav a:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.05);
+    }
+    main {
+      flex: 1;
+      padding: 40px 50px 100px;
+      max-width: 960px;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      margin: 45px 0 16px;
+      color: var(--accent);
+      scroll-margin-top: 30px;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 24px 0 10px;
+    }
+    p { margin-bottom: 16px; font-size: 15px; color: #dfd7cc; }
+    ul, ol { margin: 0 0 20px 24px; font-size: 15px; color: #dfd7cc; }
+    li { margin-bottom: 8px; }
+    .callout {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 4px 12px 12px 4px;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .callout.warning {
+      border-left-color: var(--caution);
+      background: rgba(232, 167, 90, 0.08);
+    }
+    .callout strong { color: var(--text); }
+    .screen-preview {
+      margin: 25px 0;
+      text-align: center;
+    }
+    .screen-preview img {
+      max-width: 360px;
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    }
+    .screen-preview p {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #141311;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    tr:last-child td { border-bottom: none; }
+    @media (max-width: 860px) {
+      body { flex-direction: column; }
+      aside { width: 100%; height: auto; position: static; }
+      main { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <div class="brand">⚡ Meter Record</div>
+    <nav>
+      <a href="#protected-strategy">1. The 200-Unit Strategy</a>
+      <a href="#initial-setup">2. Initial Setup</a>
+      <a href="#logging-readings">3. Logging Readings</a>
+      <a href="#usage-tiers">4. Usage Tiers & Pacing</a>
+      <a href="#household-bills">5. Household Bills Overview</a>
+      <a href="#batch-entry">6. 30-Sec Batch Bill Entry</a>
+      <a href="#copy-ref">7. 1-Tap Copy & Payments</a>
+      <a href="#trends">8. Trends & Heatmaps</a>
+      <a href="#urdu-support">9. اردو Urdu Support</a>
+      <a href="#widgets">10. Home Screen Widgets</a>
+      <a href="#backups">11. Privacy & Backups</a>
+      <a href="#faq">12. FAQ</a>
+      <a href="media-kit/" style="margin-top: 14px; background: rgba(199, 242, 75, 0.12); border: 1px solid var(--accent); color: var(--accent); font-weight: 600; text-align: center;">🎨 Media & Press Kit &rarr;</a>
+    </nav>
+  </aside>
+
+  <main>
+    <h1>Meter Record User Guide</h1>
+    <p class="lead">Master your household electricity • Keep all meters protected • Never pay late surcharges.</p>
+
+    <!-- Section 1 -->
+    <section id="protected-strategy">
+      <h2>1. The 200-Unit Protected Slab Strategy</h2>
+      <p>In Pakistan, domestic electricity tariffs set by NEPRA follow steep progressive slabs:</p>
+      <ul>
+        <li><strong>Protected Category (&le; 200 kWh/month)</strong>: Subsidized lifeline rate (~Rs 14 to Rs 20 per unit).</li>
+        <li><strong>The Tariff Cliff (&ge; 201 kWh/month)</strong>: Crossing into 201 units doubles or triples your rate (~Rs 45 to Rs 60+ per unit).</li>
+        <li><strong>The 6-Month Penalty Rule</strong>: Crossing 200 units revokes your Protected status for 6 consecutive billing months!</li>
+      </ul>
+      <div class="callout">
+        <strong>The Multi-Meter Advantage:</strong> By legally dividing home electrical loads across 4 independent single-phase meters (e.g. Main House, Garage, Studio, Basement), families keep each connection under 200 units. Meter Record serves as your mission control to ensure no connection breaches the threshold.
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="initial-setup">
+      <h2>2. Initial Setup & Meter Configuration</h2>
+      <ol>
+        <li><strong>Set Electricity Provider (DISCO)</strong>: Open Settings &rarr; Select LESCO, K-Electric, IESCO, FESCO, GEPCO, MEPCO, etc.</li>
+        <li><strong>Usage Thresholds</strong>: Default is set to <em>Warn at 150 kWh</em> and <em>Ceiling at 200 kWh</em>.</li>
+        <li><strong>Configure Meters</strong>: Go to the Meters tab and assign names, 14-digit reference numbers, distinct color tags, and the monthly billing cycle anchor day.</li>
+      </ol>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="logging-readings">
+      <h2>3. Logging Daily/Weekly Meter Readings</h2>
+      <p>Locate the digital LCD screen on your meter. Wait until it cycles to the <strong>Active Cumulative Import Energy (kWh)</strong> screen. Note down the whole number before the decimal point.</p>
+      <ul>
+        <li>Tap the central <strong>Electric Lime <code>+</code> button</strong>.</li>
+        <li>Select the meter you are logging for.</li>
+        <li>Enter the reading using the large keypad (or tap microphone for Voice Entry).</li>
+        <li>Tap <strong>Save Reading</strong>.</li>
+      </ul>
+      <div class="callout">
+        <strong>Tip:</strong> Logging readings once every 7 to 10 days gives the prediction engine enough datapoints to accurately project your cycle-end finish.
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="usage-tiers">
+      <h2>4. Usage Tiers & Pacing Projections</h2>
+      <table>
+        <thead>
+          <tr><th>Tier</th><th>Units Range</th><th>Color</th><th>Action Needed</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Safe</td><td>0 – 150 kWh</td><td><span style="color:#6FAE6F;">🟢 Green</span></td><td>Normal usage. Pace is safe.</td></tr>
+          <tr><td>Caution</td><td>151 – 175 kWh</td><td><span style="color:#E8A75A;">🟡 Amber</span></td><td>Approaching ceiling. Monitor AC usage.</td></tr>
+          <tr><td>Warning</td><td>176 – 199 kWh</td><td><span style="color:#E0794F;">🟠 Orange</span></td><td>Critical! Shift heavy loads to another meter.</td></tr>
+          <tr><td>Danger</td><td>&ge; 200 kWh</td><td><span style="color:#DA4B45;">🔴 Red</span></td><td>Protected slab lost for this cycle.</td></tr>
+        </tbody>
+      </table>
+      <div class="screen-preview">
+        <img src="media-kit/screenshots/01_home_dashboard.png" alt="Home Dashboard" />
+        <p>Home Screen: Pacing forecast and smart due-date banner</p>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="household-bills">
+      <h2>5. Consolidated Household Monthly Bills</h2>
+      <p>Access the Household Bills overview by tapping the summary card on Home. Here, you see:</p>
+      <ul>
+        <li><strong>Total Combined Household Expense</strong> (e.g. Rs 10,640 across all 4 meters).</li>
+        <li><strong>Total Household kWh</strong> and your true effective cost per unit (e.g. Rs 20.38/kWh).</li>
+        <li><strong>Paid vs Unpaid Progress Bar</strong> showing real-time balance.</li>
+        <li>Individual meter cards with 1-tap paid toggles and reference numbers.</li>
+      </ul>
+      <div class="screen-preview">
+        <img src="media-kit/screenshots/02_household_bills.png" alt="Household Bills Screen" />
+        <p>Household Bills Overview in Dark Mode</p>
+      </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="batch-entry">
+      <h2>6. 30-Second Batch Bill Entry Guide</h2>
+      <p>When your monthly utility bills arrive, tap <strong><code>+ Record Month Bills</code></strong> in the top right corner:</p>
+      <ol>
+        <li>Verify the Bill Date and Due Date.</li>
+        <li>Fill in the units and rupee amounts for all 4 meters in one form.</li>
+        <li>Watch the live <strong>Household Total</strong> auto-calculate at the bottom.</li>
+        <li>Tap <strong>Save All Bills</strong>. All 4 bills are recorded in seconds!</li>
+      </ol>
+      <div class="screen-preview">
+        <img src="media-kit/screenshots/03_batch_bill_entry.png" alt="Batch Bill Entry Modal" />
+        <p>Batch Entry Modal with Live Household Sums</p>
+      </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="copy-ref">
+      <h2>7. 1-Tap Bill Payment & Copying Reference Numbers</h2>
+      <p>To avoid late payment surcharges:</p>
+      <ul>
+        <li>Tap the <strong>clipboard icon</strong> next to any meter's reference number to copy its 14 digits.</li>
+        <li>Open your banking app (Meezan Mobile, Nayapay, SadaPay, Easypaisa, or JazzCash).</li>
+        <li>Paste directly into the Bill Payment screen.</li>
+        <li>Return to Meter Record and tap <strong>Mark Paid</strong> with an optional note (e.g. "Nayapay").</li>
+      </ul>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="trends">
+      <h2>8. Trends, Historical Comparisons & Heatmaps</h2>
+      <p>Navigate to the <strong>Trends</strong> tab to view cycle-by-cycle consumption graphs, meter load shares, and heatmaps showing high-usage spikes across weeks.</p>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="urdu-support">
+      <h2>9. Bilingual Urdu Support (اردو)</h2>
+      <p>Go to Settings &rarr; Language &rarr; Tap <strong><code>اردو</code></strong>. The app instantly switches to a native Right-to-Left (RTL) layout with localized Urdu terminology.</p>
+      <div class="screen-preview">
+        <img src="media-kit/screenshots/04_urdu_rtl_dashboard.png" alt="Urdu RTL Dashboard" />
+        <p>Household Bills in full Urdu RTL Mode</p>
+      </div>
+    </section>
+
+    <!-- Section 10 -->
+    <section id="widgets">
+      <h2>10. Home Screen Widgets</h2>
+      <p>Long-press your phone's home screen &rarr; Tap <strong>Widgets</strong> &rarr; Select <strong>Meter Record</strong> &rarr; Drag to place. View per-meter consumption without opening the app.</p>
+    </section>
+
+    <!-- Section 11 -->
+    <section id="backups">
+      <h2>11. Data Privacy, Backups & PDF Exports</h2>
+      <p>Meter Record is 100% offline. No third-party trackers or ad networks.</p>
+      <ul>
+        <li><strong>PDF Report</strong>: Generate clean, print-ready reports in Settings.</li>
+        <li><strong>CSV Export</strong>: Export your raw reading history to Excel or Google Sheets.</li>
+        <li><strong>JSON Backup</strong>: Create full encrypted backups to transfer data between phones.</li>
+      </ul>
+    </section>
+
+    <!-- Section 12 -->
+    <section id="faq">
+      <h2>12. Frequently Asked Questions (FAQ)</h2>
+      <div class="callout">
+        <strong>Q: Can I change a meter's reference number?</strong><br/>
+        Yes, tap any meter in the Meters tab to edit its 14-digit reference number, name, or color tag anytime.
+      </div>
+      <div class="callout">
+        <strong>Q: What if I entered the wrong reading?</strong><br/>
+        Select the meter, go to its Readings list, tap the incorrect entry, and choose Edit or Delete.
+      </div>
+      <div class="callout">
+        <strong>Q: How do I handle month-to-month DISCO reading delays?</strong><br/>
+        When logging a bill or reading, select the actual date it was read. Meter Record dynamically computes daily burn rates based on real elapsed days.
+      </div>
+    </section>
+  </main>
+</body>
+</html>

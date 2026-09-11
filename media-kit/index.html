@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meter Record • Official Press & Media Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #131210;
+      --card: #1B1915;
+      --border: #2A2721;
+      --text: #EFE9E1;
+      --muted: #9A9184;
+      --accent: #C7F24B;
+      --accent-ink: #1A1206;
+      --danger: #DA4B45;
+      --caution: #E8A75A;
+      --safe: #6FAE6F;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+      line-height: 1.6;
+      padding: 0 20px 80px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+    .hero-banner {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 780px;
+      margin: 0 auto 30px;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .nav-links a {
+      color: var(--text);
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .nav-links a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 26px;
+      margin: 50px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .fact-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .fact-table tr {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .fact-table tr:last-child { border-bottom: none; }
+    .fact-table td {
+      padding: 10px 0;
+      font-size: 14px;
+    }
+    .fact-table td:first-child {
+      color: var(--muted);
+      width: 38%;
+      font-weight: 500;
+    }
+    .fact-table td:last-child {
+      font-weight: 600;
+    }
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .swatch {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .swatch-color {
+      height: 60px;
+      width: 100%;
+    }
+    .swatch-label {
+      padding: 8px 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .swatch-hex {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 12px;
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .gallery-item p {
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .copy-box {
+      background: #0d0c0b;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      font-family: monospace;
+      font-size: 13px;
+      color: #dfd8cc;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      line-height: 1.5;
+      margin-top: 12px;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Official Media Kit</span>
+      <h1>Meter Record (میٹر ریکارڈ)</h1>
+      <p class="subtitle">The smart, offline-first household electricity command center for multi-meter homes in Pakistan.</p>
+      
+      <div class="nav-links">
+        <a href="#fact-sheet">⚡ Fact Sheet</a>
+        <a href="#the-story">📖 The Story</a>
+        <a href="#features">🚀 Features</a>
+        <a href="#branding">🎨 Brand System</a>
+        <a href="#screenshots">📸 Screenshots</a>
+        <a href="#press-release">📰 Press Release</a>
+        <a href="#listing">📱 Store Copy</a>
+        <a href="../" style="background: var(--accent); color: var(--accent-ink); font-weight: 700;">📘 User Guide &rarr;</a>
+      </div>
+
+      <img src="feature_graphic.jpg" alt="Meter Record Promo Banner" class="hero-banner" />
+    </header>
+
+    <!-- Fact Sheet & Story -->
+    <section id="fact-sheet">
+      <h2 class="section-title">⚡ Fact Sheet & Quick Specs</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Product Specifications</h3>
+          <table class="fact-table">
+            <tr><td>Application</td><td>Meter Record (میٹر ریکارڈ)</td></tr>
+            <tr><td>Developer</td><td>Hassan</td></tr>
+            <tr><td>Platforms</td><td>Native Android (Kotlin, Jetpack Compose)</td></tr>
+            <tr><td>Compatibility</td><td>Android 8.0+ (API 26 to API 35)</td></tr>
+            <tr><td>Current Version</td><td>Version 2.1 (Build 17 • Schema v4)</td></tr>
+            <tr><td>Pricing</td><td>100% Free • No Ads • No In-App Purchases</td></tr>
+            <tr><td>Storage</td><td>100% Offline SQLite/Room Database</td></tr>
+            <tr><td>Supported DISCOs</td><td>LESCO, K-Electric, IESCO, FESCO, GEPCO, MEPCO & more</td></tr>
+          </table>
+        </div>
+
+        <div class="card" id="the-story">
+          <h3>The Story Behind the App</h3>
+          <p style="font-size: 14px; color: var(--text); margin-bottom: 12px;">
+            In Pakistan, residential electricity tariffs have steep non-linear slabs. Staying at or below <strong>200 units/month</strong> grants <em>"Protected"</em> status with subsidized lifeline rates. Crossing just 1 unit beyond 200 doubles your base rate and strips protected status for 6 consecutive months.
+          </p>
+          <p style="font-size: 14px; color: var(--muted);">
+            To manage this legally, many homes run <strong>multiple independent single-phase meters</strong> (e.g. 4 meters: Main House, Garage, Studio, Basement). Meter Record consolidates these scattered connections into one beautiful, private, and actionable cockpit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features">
+      <h2 class="section-title">🚀 Key Capabilities</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>🏠 Multi-Meter Command Center</h3>
+          <p style="font-size: 14px; color: var(--muted);">
+            Monitor 4+ independent physical connections side-by-side with color-coded tier cards (Safe Green, Caution Amber, Warning Orange, Danger Red).
+          </p>
+        </div>
+        <div class="card">
+          <h3>🛡️ ≤200 kWh Protected Slab Watchdog</h3>
+          <p style="font-size: 14px; color: var(--muted);">
+            Real-time pace projections and threshold warnings before any connection breaches 150 or 175 units, protecting your low tariff bracket.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🧾 Consolidated Household Bills</h3>
+          <p style="font-size: 14px; color: var(--muted);">
+            Aggregates total combined monthly household expenditure, true effective Rs/kWh, and paid vs unpaid ratios across all 4 meters.
+          </p>
+        </div>
+        <div class="card">
+          <h3>⚡ 30-Second Fast Batch Entry</h3>
+          <p style="font-size: 14px; color: var(--muted);">
+            Log all 4 monthly bills in under 30 seconds in a single modal with live dynamic household sum calculations.
+          </p>
+        </div>
+        <div class="card">
+          <h3>⚠️ Due-Date Warning & 1-Tap Copy</h3>
+          <p style="font-size: 14px; color: var(--muted);">
+            Urgent Home warning banners prevent late-payment surcharges; 1-tap copies the clean 14-digit reference number for Meezan, Nayapay, or Easypaisa.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🇵🇰 Bilingual RTL Parity (Urdu & English)</h3>
+          <p style="font-size: 14px; color: var(--muted);">
+            First-class Right-to-Left Urdu experience with localized typography, natural phrasing, and high-contrast Dark and Light themes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand System -->
+    <section id="branding">
+      <h2 class="section-title">🎨 Brand Colors & Design System</h2>
+      <p style="font-size: 14px; color: var(--muted); margin-bottom: 14px;">Official palette tokens matching the in-app design system:</p>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #131210;"></div>
+          <div class="swatch-label">Dark BG<div class="swatch-hex">#131210</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1B1915;"></div>
+          <div class="swatch-label">Dark Card<div class="swatch-hex">#1B1915</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #C7F24B;"></div>
+          <div class="swatch-label" style="color:#C7F24B">Electric Lime<div class="swatch-hex">#C7F24B</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #F7F5F1;"></div>
+          <div class="swatch-label">Light BG<div class="swatch-hex">#F7F5F1</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1F6F6B;"></div>
+          <div class="swatch-label" style="color:#4ec3be">Teal Accent<div class="swatch-hex">#1F6F6B</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #6FAE6F;"></div>
+          <div class="swatch-label" style="color:#6FAE6F">Safe ≤150<div class="swatch-hex">#6FAE6F</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #E8A75A;"></div>
+          <div class="swatch-label" style="color:#E8A75A">Caution<div class="swatch-hex">#E8A75A</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #DA4B45;"></div>
+          <div class="swatch-label" style="color:#DA4B45">Danger ≥200<div class="swatch-hex">#DA4B45</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshot Gallery -->
+    <section id="screenshots">
+      <h2 class="section-title">📸 High-Resolution Screenshots</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="screenshots/01_home_dashboard.png" alt="Home Screen Dashboard" />
+          <p>01. Home Dashboard & Urgent Banner</p>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/02_household_bills.png" alt="Consolidated Household Bills" />
+          <p>02. Consolidated Household Bills (Dark)</p>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/03_batch_bill_entry.png" alt="Batch 4-Meter Bill Entry Modal" />
+          <p>03. 30-Sec Batch Bill Entry</p>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/04_urdu_rtl_dashboard.png" alt="Urdu RTL Dashboard" />
+          <p>04. Complete Urdu RTL Support</p>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/05_light_theme.png" alt="Light Theme" />
+          <p>05. Editorial Light Theme</p>
+        </div>
+        <div class="gallery-item">
+          <img src="screenshots/06_settings_customization.png" alt="Settings & DISCO Selection" />
+          <p>06. Settings & Customization</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press Release Snippet -->
+    <section id="press-release">
+      <h2 class="section-title">📰 Official Press Release</h2>
+      <div class="card">
+        <h3>FOR IMMEDIATE RELEASE: Pakistani Indie Developer Launches "Meter Record"</h3>
+        <p style="font-size: 13px; color: var(--muted); margin-bottom: 10px;">Full press release text (available in <code>media_kit/PRESS_RELEASE.md</code>):</p>
+        <div class="copy-box">OKARA, PAKISTAN — Today marks the official announcement of Meter Record (میٹر ریکارڈ), an offline-first Android application designed specifically to address the economic and operational complexities of residential electricity consumption in Pakistan.
+
+Under prevailing NEPRA tariffs, domestic consumers maintaining 200 units (kWh) or fewer per month receive heavily subsidized "Protected" status. Breaching this 200-unit ceiling on a single bill can double or triple the consumer's tariff bracket and disqualify the household from subsidized rates for six consecutive months.
+
+To legally distribute electrical loads, thousands of Pakistani homes operate multiple independent single-phase meters. Meter Record provides real-time protected slab watchdogs, a consolidated household monthly bills dashboard, 30-second batch bill entry, and 1-tap clipboard reference numbers for mobile banking apps.</div>
+      </div>
+    </section>
+
+    <!-- Play Store Listing Snippet -->
+    <section id="listing">
+      <h2 class="section-title">📱 Google Play Store Copy</h2>
+      <div class="card">
+        <h3>Short Description (80 chars)</h3>
+        <div class="copy-box">Track multi-meter electricity, keep under 200 units protected, and manage bills.</div>
+        
+        <h3 style="margin-top: 20px;">Short Urdu Description</h3>
+        <div class="copy-box">ملٹی میٹرز کی ریڈنگز، 200 یونٹ پروٹیکٹڈ سلیب اور گھریلو بلوں کا اسمارٹ ٹریکر۔</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Meter Record Media Kit • Version 1.0 (September 2026)</p>
+      <p style="margin-top: 6px;">Developed by Hassan • Built with Jetpack Compose & Material 3</p>
+    </footer>
+  </div>
+</body>
+</html>
