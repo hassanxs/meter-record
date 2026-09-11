@@ -131,19 +131,13 @@ To manage this reality legally, many Pakistani homes install **multiple independ
 
 ## 📸 Media Assets & Screenshot Showcase
 
-````carousel
-![Home Screen Dashboard](/screen_home_final.png)
-<!-- slide -->
-![Consolidated Household Bills Screen](/screen_household_bills_fresh.png)
-<!-- slide -->
-![Batch 4-Meter Bill Entry Modal](/batch_entry_all_filled.png)
-<!-- slide -->
-![Urdu RTL Household Bills Screen](/screen_household_bills_urdu_live.png)
-<!-- slide -->
-![Light Theme Household Bills Screen](/screen_household_bills_light_mode.png)
-<!-- slide -->
-![Settings & Customization Screen](/screen_settings.png)
-````
+| 01. Home Dashboard | 02. Household Bills | 03. Batch Bill Entry |
+| :---: | :---: | :---: |
+| ![Home Dashboard](screenshots/01_home_dashboard.png) | ![Household Bills](screenshots/02_household_bills.png) | ![Batch Bill Entry](screenshots/03_batch_bill_entry.png) |
+
+| 04. Urdu RTL Mode | 05. Light Theme | 06. Settings & DISCO |
+| :---: | :---: | :---: |
+| ![Urdu RTL Mode](screenshots/04_urdu_rtl_dashboard.png) | ![Light Theme](screenshots/05_light_theme.png) | ![Settings & DISCO](screenshots/06_settings_customization.png) |
 
 ---
 

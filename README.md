@@ -4,6 +4,8 @@
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://hassanxs.github.io/meter-record/)
 [![Download APK](https://img.shields.io/badge/Download-APK%20v2.1-blue.svg?logo=android)](https://github.com/hassanxs/meter-record/releases/latest)
 
+![Meter Record Feature Graphic](media-kit/feature_graphic.jpg)
+
 > **The Smart Household Electricity Command Center for Multi-Meter Homes in Pakistan.**  
 > Monitor independent connections, protect your $\le 200$ kWh lifeline slab, track consolidated bills, and prevent late surcharges.
 

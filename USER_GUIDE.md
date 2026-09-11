@@ -1,5 +1,7 @@
 # Meter Record (میٹر ریکارڈ) • Complete User Guide
 
+![Meter Record Feature Graphic](media-kit/feature_graphic.jpg)
+
 > **Master Your Household Electricity • Keep All Meters Protected • Never Pay Late Surcharges**
 
 Welcome to **Meter Record**! This guide walks you through every feature of the app, designed specifically for Pakistani homeowners managing single or multiple independent electricity meters (e.g. *Main House*, *Garage*, *Studio*, *Basement*).
@@ -65,6 +67,8 @@ graph TD
      * **Color Tag**: Assign a distinct color to visually differentiate meters across charts.
      * **Billing Cycle Day**: The day of the month your DISCO meter reader visits your house (e.g., 5th of each month).
 
+![Settings & DISCO Configuration](media-kit/screenshots/06_settings_customization.png)
+
 ---
 
 ## 3. Logging Daily/Weekly Meter Readings
@@ -115,13 +119,15 @@ Each meter displays an active status badge based on its pacing toward the 200 kW
 If any meter is pacing too fast or crosses 175 units, a high-visibility warning banner appears on the Home dashboard:
 > `⚡ Studio has used past 175 units this cycle — keep it under 200`
 
+![Home Dashboard & Pacing](media-kit/screenshots/01_home_dashboard.png)
+
 ---
 
 ## 5. Consolidated Household Monthly Bills & Due Dates
 
 When monthly bills arrive from LESCO or K-Electric, they are logged and tracked in the **Household Bills Overview**.
 
-![Household Bills Overview](/screen_household_bills_fresh.png)
+![Household Bills Overview](media-kit/screenshots/02_household_bills.png)
 
 ### How to Access Household Bills:
 * Tap the **Household Bills Card** on the Home tab (`⚡ Household Bills • JULY 2026 ›`).
@@ -147,7 +153,7 @@ When monthly bills arrive from LESCO or K-Electric, they are logged and tracked 
 
 Instead of opening 4 different screens to enter your monthly bills, use the **Batch Bill Entry Modal**:
 
-![Batch Bill Entry Modal](/batch_entry_all_filled.png)
+![Batch Bill Entry Modal](media-kit/screenshots/03_batch_bill_entry.png)
 
 ### Step-by-Step Instructions:
 1. Open the **Household Bills** screen.
@@ -196,11 +202,13 @@ Tap the **Trends** tab (chart icon on the bottom navigation bar) to analyze your
 
 ---
 
-## 9. Bilingual Urdu Support (اردو)
+## 9. Bilingual Urdu Support (اردو) & Light Theme
 
-Meter Record provides full, native Right-to-Left (RTL) Urdu translation:
+Meter Record provides full, native Right-to-Left (RTL) Urdu translation alongside crisp Light and Dark themes:
 
-![Urdu RTL Household Bills](/screen_household_bills_urdu_live.png)
+![Urdu RTL Household Bills](media-kit/screenshots/04_urdu_rtl_dashboard.png)
+
+![High-Contrast Light Theme](media-kit/screenshots/05_light_theme.png)
 
 ### How to Switch to Urdu:
 1. Tap the **Settings** (ترتیبات) tab.
